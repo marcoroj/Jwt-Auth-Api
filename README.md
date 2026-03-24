@@ -110,20 +110,7 @@ POST
 /api/usuarios/remover-admin
 ```
 
----
 
-# Seguridad implementada
-
-El sistema utiliza las siguientes prácticas de seguridad:
-
-* Los **Access Tokens** tienen tiempo de vida corto.
-* Los **Refresh Tokens** se almacenan **hasheados con SHA256** en la base de datos.
-* Cada vez que se usa un refresh token se **revoca el anterior** y se genera uno nuevo (**Token Rotation**).
-* Validación de expiración de tokens.
-* Uso de **UTC time** para evitar problemas de zonas horarias.
-* Protección de endpoints con **JWT Bearer Authentication**.
-
----
 
 # Estructura del proyecto
 
@@ -137,17 +124,4 @@ Data (DbContext)
 
 El proyecto sigue una separación básica de responsabilidades entre **controladores, servicios y modelos de datos**.
 
----
-
-# Conceptos aprendidos
-
-Durante el desarrollo de este proyecto se aplicaron y comprendieron los siguientes conceptos:
-
-* Autenticación basada en **JWT**
-* Uso de **Refresh Tokens** para mantener sesiones seguras
-* **Rotación y revocación de refresh tokens**
-* Hashing de tokens utilizando **SHA256**
-* Uso de **ASP.NET Core Identity**
-* Implementación de **Claims y políticas de autorización**
-* Buenas prácticas de seguridad en APIs REST
 
